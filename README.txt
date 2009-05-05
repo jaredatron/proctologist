@@ -6,7 +6,7 @@
 
 Add additional to_proc methods on objects like Symbol, Regexp, String, Array, Hash and more
 
-== FEATURES/PROBLEMS:
+== FEATURES:
 
 Symbol#to_proc
 String#to_proc
