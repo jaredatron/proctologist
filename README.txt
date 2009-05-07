@@ -1,6 +1,6 @@
 = to_proc
 
-* http://github.com/deadlyicon/to_proc
+* http://github.com/deadlyicon/proctologist
 
 == DESCRIPTION:
 
@@ -18,11 +18,12 @@ Class#to_proc
 == SYNOPSIS:
 
 Symbol#to_proc
-  %w(hello from the template).map(:&:upcase)
+  %w(hello from the template).map(&:upcase)
   # => ['HELLO', 'FROM', 'THE', 'TEMPLATE']
 
 String#to_proc
-  # => ?
+  %w(String, Array).map(&'...')
+  # => '.new'
 
 Regexp#to_proc
   %w(Jared Bob Sam Steve Albert).find_all(:/.*e.*/)
@@ -38,24 +39,28 @@ Array#to_proc
   # => ?
   
 Class#to_proc
-  class InYourFace
+  class MyExampleClass
     def initialize(value)
     end
   end
   
-  %w(Steve Bill George).map(&InYourFace)
-  # => [#<InYourFace:0x12b45ac>, #<InYourFace:0x12b004c>, #<InYourFace:0x12abaec>]
+  %w(Steve Bill George).map(&MyExampleClass)
+  # => [#<MyExampleClass:0x12b45ac>, #<MyExampleClass:0x12b004c>, #<MyExampleClass:0x12abaec>]
   
 
 == INSTALL:
 
 sudo gem install deadlyicon-to_proc --source http:://gems.github.com
 
+== TODO:
+
+convert all of these to C for speed
+
 == LICENSE:
 
 (The MIT License)
 
-Copyright (c) 2009 FIX
+Copyright (c) 2009
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

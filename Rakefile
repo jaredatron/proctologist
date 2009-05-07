@@ -2,10 +2,10 @@
 
 require 'rubygems'
 require 'hoe'
-require './lib/to_proc.rb'
+require './lib/proctologist.rb'
 
-Hoe.new('to_proc', ToProc::VERSION) do |p|
-  # p.rubyforge_name = 'to_procx' # if different than lowercase project name
+Hoe.new('proctologist', Proctologist::VERSION) do |p|
+  # p.rubyforge_name = 'proctologistx' # if different than lowercase project name
   p.developer('Jared Grippe', 'jared@jaredgrippe.com')
 end
 

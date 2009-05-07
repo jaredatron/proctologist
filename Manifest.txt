@@ -2,6 +2,6 @@ History.txt
 Manifest.txt
 README.txt
 Rakefile
-bin/to_proc
-lib/to_proc.rb
-test/test_to_proc.rb
+bin/proctologist
+lib/proctologist.rb
+test/test_proctologist.rb
